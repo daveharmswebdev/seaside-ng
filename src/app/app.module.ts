@@ -28,13 +28,14 @@ import {
   MsalGuardConfiguration,
   MsalInterceptor,
   MsalInterceptorConfiguration,
-  MsalModule,
   MsalRedirectComponent,
   MsalService,
   ProtectedResourceScopes,
 } from '@azure/msal-angular';
 import { MatTableModule } from '@angular/material/table';
 import { NewTodoComponent } from './new-todo/new-todo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication(msalConfig);
@@ -90,12 +91,15 @@ export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
     MatCardModule,
     MatTableModule,
+    MatInputModule,
   ],
   providers: [
     {

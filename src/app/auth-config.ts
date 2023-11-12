@@ -62,7 +62,6 @@ export const loginRequest = {
 
 export const protectedResources = {
   todoListApi: {
-    // endpoint: 'http://localhost:5275/Hello',
     endpoint: 'https://localhost:7261/Todo',
     scopes: {
       read: ['https://seaside2023.onmicrosoft.com/todos-api/todos.read'],
